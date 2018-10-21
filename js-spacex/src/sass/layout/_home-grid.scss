@@ -1,0 +1,307 @@
+.home-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; //css grid of 6 columns and 5 rows - display for big devices
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
+    grid-template-rows: 1fr 0.5fr auto 1fr 1fr;
+    grid-template-areas: "name name . . redirect redirect" ". . . . . ." ". quote quote quote quote ." "button button button button button button" "equalizer equalizer scroll scroll code code";
+    color: $grey;
+    font-family: 'Signika', sans-serif;
+    @media screen and (max-width: 600px) {
+        //css grid of 6 columns and 6 rows - display for small devices        
+        grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
+        grid-template-rows: 0.9fr 0.4fr auto 1.3fr 0.5fr 1fr;
+        grid-template-areas: ". name name name name . " "code code code code code code" "quote quote quote quote quote quote" "button button button button button button" "redirect redirect redirect redirect redirect redirect" ". . scroll scroll equalizer equalizer";
+        .quote-container {
+            p {
+                padding: 2rem 2rem;
+            }
+        }
+    }
+    //logo
+    .website-name-container {
+        grid-area: name;
+        .website-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 50%;
+                transition: 0.2s opacity ease; 
+                will-change: opacity; 
+                &:hover {
+                    opacity: 0.5; 
+                }
+            }
+        }
+        opacity: 0;
+        transform: translateY(1rem);
+        animation: fade-in 0.5s ease forwards;
+    }
+    //go to spacex.com
+    .redirect-container {
+        grid-area: redirect;
+        .redirect {
+            position: relative;
+            padding: 1rem 0rem;
+            opacity: 0.5;
+            transition: 0.2s opacity ease;
+            &:before {
+                content: "";
+                position: absolute;
+                right: 110%;
+                top: 38%;
+                width: 2px;
+                height: 28%;
+                background: $green;
+                transform: scale(0);
+                transform-origin: 0 0;
+                transition: 0.2s transform ease;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 110%;
+                top: 38%;
+                width: 2px;
+                height: 28%;
+                background: $green;
+                transform: scale(0);
+                transform-origin: 0 100%;
+                transition: 0.3s transform ease-in-out;
+            }
+            &:hover {
+                opacity: 1;
+                &:before {
+                    transform: scale(1);
+                }
+                &:after {
+                    transform: scale(1);
+                }
+            }
+        }
+        opacity: 0;
+        transform: translateY(1rem);
+        animation: fade-in 0.5s ease forwards;
+    }
+    .quote-container {
+        grid-area: quote;
+        text-align: center;
+        transition: 0.5s all ease-out;
+        will-change: transform;
+        &:hover {
+            color: $grey;
+        }
+        p {
+            width: 100%;
+            font-size: 2rem;
+        }
+        .quote-name {
+            padding: 0rem 2rem;
+            opacity: 0.5;
+            span {
+                color: $green;
+            }
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(1rem);
+            animation: fade-in 2s ease forwards;
+        }
+    }
+    .button-container {
+        grid-area: button;
+        opacity: 0;
+        transform: translateY(2px);
+        animation: fade-in 2s ease forwards 0.5s;
+        .button-home {
+            position: relative;
+            padding: 1rem 0rem;
+            transition: opacity 0.2s ease;
+            will-change: opacity;
+            font-size: 1.2rem;
+            transition: 0.5s all ease-out;
+            will-change: transform;
+            text-transform: uppercase;
+            &:hover {
+                opacity: 0.6;
+                &:before {
+                    transform: scale(0)
+                }
+                &:after {
+                    transform: scale(0)
+                }
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                width: 100%;
+                height: 2px;
+                transform-origin: 0 50%;
+                background: $green;
+                transition: 0.5s all ease-out;
+                will-change: transform;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                height: 2px;
+                transform-origin: 100% 50%;
+                background: $green;
+                transition: 0.5s all ease-out;
+                will-change: transform;
+            }
+        }
+    }
+    .invite-scroll {
+        grid-area: scroll;
+        font-size: 0.7rem;
+        .scroll-container {
+            position: relative;
+            width: 15%;
+            height: 50%;
+            transform: translate(0px, 15px);
+            transition: 0.5s all ease-out;
+            will-change: transform;
+            .scroll-text {
+                position: absolute;
+                left: 50%;
+                color: $grey2;
+                transform: translate(-50%, 0);
+                transition: 0.5s all ease;
+            }
+            .scroll-line {
+                position: absolute;
+                width: 1px;
+                height: 90%;
+                left: 50%;
+                top: 1.5rem;
+                background: $grey2;
+                transition: 0.5s all ease 0.1s;
+            }
+            &:hover {
+                .scroll-text {
+                    color: $grey;
+                    transform: translate(-50%, 6px);
+                }
+                .scroll-line {
+                    background: $green;
+                    transform: translateY(6px);
+                }
+            }
+        }
+    }
+    //view code on github
+    .github {
+        grid-area: code;
+        font-size: 0.9rem;
+        z-index: 1;
+        .github-text {
+            position: relative;
+            opacity: 0.5;
+            padding: 1rem 0rem;
+            transition: 0.2s opacity ease;
+            &:before {
+                content: "";
+                position: absolute;
+                right: 110%;
+                top: 38%;
+                width: 2px;
+                height: 28%;
+                background: $green;
+                transform: scale(0);
+                transform-origin: 0 0;
+                transition: 0.2s transform ease;
+            }
+            &:hover {
+                opacity: 1;
+                &:before {
+                    transform: scale(1);
+                }
+            }
+        }
+        .fa-github {
+            margin: 0px 5px;
+            color: $green;
+        }
+        opacity: 0;
+        transform: translateY(1rem);
+        animation: fade-in 0.5s ease forwards;
+    }
+    .equalizer {
+        grid-area: equalizer;
+        .equalizer-container {
+            padding: 1rem;
+            transition: 0.2s opacity ease;
+            will-change: opacity;
+            &:hover {
+                opacity: 0.5;
+            }
+            .equalizer-bar {
+                width: 0.2rem;
+                height: 1.5rem;
+                background: $green;
+                margin: 0rem 0.1rem;
+                will-change: transform;
+                transition: 0.1s color ease;
+            }
+            .equalizer-bar-1 {
+                &.animation {
+                    animation: equalizer 1.3s infinite both 0.7s;
+                }
+                &.paused {
+                    animation-play-state: paused;
+                    background: $grey;
+                }
+            }
+            .equalizer-bar-2 {
+                &.animation {
+                    animation: equalizer 1.3s infinite both 0.1s;
+                }
+                &.paused {
+                    animation-play-state: paused;
+                    background: $grey;
+                }
+            }
+            .equalizer-bar-3 {
+                &.animation {
+                    animation: equalizer 1.3s infinite both 0.3s;
+                }
+                &.paused {
+                    animation-play-state: paused;
+                    background: $grey;
+                }
+            }
+            .equalizer-bar-4 {
+                &.animation {
+                    animation: equalizer 1.3s infinite both 1.3s;
+                }
+                &.paused {
+                    animation-play-state: paused;
+                    background: $grey;
+                }
+            }
+            .equalizer-bar-5 {
+                &.animation {
+                    animation: equalizer 1.3s infinite both 1s;
+                }
+                &.paused {
+                    animation-play-state: paused;
+                    background: $grey;
+                }
+            }
+        }
+    }
+}
+
+@keyframes equalizer {
+    50% {
+        background: #1b7e67;
+        transform: scaleY(0.5)
+    }
+}

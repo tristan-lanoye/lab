@@ -1,0 +1,45 @@
+.leaflet-control-layers {
+    margin: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 2px;
+    border: 0px solid black !important;
+    background: #f1f1f1 !important;
+    box-shadow: 2px 2px 1px rgba(97, 92, 92, 0.3) !important;
+    z-index: 55;
+    .leaflet-control-layers-toggle {
+        background-image: url('../svg/menu.svg');
+        background-size: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .leaflet-control-layers-list {
+        width: 10rem;
+        padding: 0.5rem 0.7rem;
+    }
+}
+
+.leaflet-control-container {
+    z-index: 55;
+}
+
+.leaflet-top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.leaflet-control-zoom {
+    margin: 0;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    border: 0px solid black !important;
+    box-shadow: 2px 2px 1px rgba(97, 92, 92, 0.3) !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    font-size: 1rem !important;
+}

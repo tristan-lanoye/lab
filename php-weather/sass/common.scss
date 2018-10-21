@@ -1,0 +1,62 @@
+@font-face {
+    font-family: cooper-bold;
+    src: url(../fonts/CooperHewitt-Bold.otf)
+}
+
+@font-face {
+    font-family: cooper-light;
+    src: url(../fonts/CooperHewitt-Book.otf)
+}
+
+$orange: #0073bb;
+$red: #d32323;
+.hidden {
+    display: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: cooper-light;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.github {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    z-index: 15;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-family: cooper-bold;
+    a {
+        color: #ae0016;
+        text-shadow: 3px 3px 0 #e4e6dd;
+        &:hover {
+            color: #e4e6dd;
+            text-shadow: 3px 3px 0 #ae0016;
+        }
+    }
+}
+
+.align {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contrast {
+    opacity: 0.5;
+}

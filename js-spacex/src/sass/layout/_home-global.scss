@@ -1,0 +1,84 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: 'Signika', sans-serif;
+    overflow: hidden;
+    cursor: none;
+}
+
+a {
+    cursor: none;
+    text-decoration: none;
+    &:hover {
+        cursor: none;
+    }
+}
+
+.canvas-background {
+    display: block;
+    background: #141414;
+}
+
+//cursors are initially set at the top left corner of the screen 
+//will move with css transform 
+.cursor {
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background: #fefefe;
+    will-change: transform;
+    z-index: 100;
+}
+
+.cursor-circle {
+    position: absolute;
+    top: -7px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: solid 0.5px #fefefe;
+    transition: width linear 0.1s, height linear 0.1s, top linear 0.1s, left linear 0.1s, opacity ease-in-out 0.2s;
+    will-change: transform;
+    &.hovering {
+        //when mouse hovers data-link html elements, apply changes
+        top: -16px;
+        left: -16px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.1;
+    }
+}
+
+//re-usable class for centering children elements 
+.center-children {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//dynamically generated letters using js 
+.letter {
+    transition: color 0.1s ease-out;
+    opacity: 0;
+    color: $grey;
+    will-change: opacity;
+    &:hover {
+        color: $green;
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

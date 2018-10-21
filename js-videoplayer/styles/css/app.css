@@ -1,0 +1,406 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background: #222222;
+  font-size: 0.9vw;
+  overflow: hidden;
+}
+
+.intro-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #111111;
+  z-index: 50;
+  transition: 1s all ease;
+}
+.intro-screen span {
+  color: #fefefe;
+  transition: 1s all ease;
+  font-size: 1.6vw;
+}
+
+.video-container {
+  position: absolute;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  line-height: 0;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.video-container video {
+  width: 100%;
+}
+.video-container .video-infos {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 11%;
+  background: linear-gradient(to top, rgba(17, 17, 17, 0.021), rgba(17, 17, 17, 0.359));
+  transition: 0.1s opacity ease-out;
+  opacity: 0;
+  z-index: 2147483647;
+}
+.video-container .video-infos .controls-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  height: 25%;
+  color: #fefefe;
+}
+.video-container .video-infos .controls-button .svg.svg-stroke {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  stroke: #756d6d;
+  transition: 0.1s stroke ease;
+}
+.video-container .video-infos .controls-button .svg.svg-stroke:hover {
+  stroke: #fefefe;
+  cursor: pointer;
+}
+.video-container .video-infos .controls-button .svg.svg-fill {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: #756d6d;
+  stroke: none;
+  transition: 0.1s fill ease;
+}
+.video-container .video-infos .controls-button .svg.svg-fill:hover {
+  fill: #fefefe;
+  cursor: pointer;
+}
+.video-container .video-infos .controls-button .svg.active {
+  display: inline-block;
+}
+.video-container .video-infos .controls-button-info {
+  position: relative;
+}
+.video-container .video-infos .controls-button-info .info-title {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  width: 20vw;
+  background: rgba(17, 17, 17, 0.623);
+  font-size: 0.9vw;
+  color: #fefefe;
+  line-height: 1.6;
+  padding: 25%;
+  opacity: 0;
+  transform: scaleX(0);
+}
+.video-container .video-infos .controls-button.video-title {
+  width: 20%;
+}
+.video-container .video-infos.infos-active {
+  opacity: 1;
+}
+.video-container .video-controls {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background: linear-gradient(to bottom, rgba(17, 17, 17, 0.158), rgba(17, 17, 17, 0.752));
+  transition: 0.1s opacity ease-out;
+  opacity: 0;
+  z-index: 2147483647;
+}
+.video-container .video-controls .controls-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  height: 25%;
+  color: #fefefe;
+}
+.video-container .video-controls .controls-button .svg.svg-stroke {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  stroke: #756d6d;
+  transition: 0.1s stroke ease;
+}
+.video-container .video-controls .controls-button .svg.svg-stroke:hover {
+  stroke: #fefefe;
+  cursor: pointer;
+}
+.video-container .video-controls .controls-button .svg.svg-fill {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: #fefefe;
+  stroke: none;
+  transition: 0.1s fill ease;
+}
+.video-container .video-controls .controls-button .svg.svg-fill:hover {
+  fill: #ffffff;
+  cursor: pointer;
+}
+.video-container .video-controls .controls-button .svg.active {
+  display: inline-block;
+}
+.video-container .video-controls .controls-button-repeat .svg.svg-stroke.svg-repeat {
+  stroke: #756d6d;
+  transition: 0.1s all linear;
+}
+.video-container .video-controls .controls-button-repeat .svg.svg-stroke.repeat-active {
+  stroke: #fefefe;
+}
+.video-container .video-controls .controls-button-cinema .svg.svg-stroke.svg-cinema {
+  stroke: #756d6d;
+  transition: 0.1s all linear;
+}
+.video-container .video-controls .controls-button-cinema .svg.svg-stroke.cinema-active {
+  stroke: #fefefe;
+}
+.video-container .video-controls.controls-active {
+  opacity: 1;
+}
+
+.cinema-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.729);
+  transition: 0.5s opacity ease;
+  z-index: 5;
+}
+.cinema-background.active {
+  opacity: 1;
+}
+
+.artist-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+}
+.artist-background .artist-name {
+  font-size: 23.5vw;
+  color: #756d6d;
+  padding: 0.55vw 0.7vw;
+  text-transform: uppercase;
+  opacity: 0.1;
+}
+.artist-background .artist-song {
+  font-size: 15.5vw;
+  color: #756d6d;
+  padding: 0.55vw 3vw;
+  text-transform: uppercase;
+  transform-origin: 0 0;
+  opacity: 0.07;
+}
+.artist-background .artist-year {
+  font-size: 8.5vw;
+  color: #756d6d;
+  padding: 0.55vw 10vw;
+  text-transform: uppercase;
+  opacity: 0.03;
+}
+
+.cinema-position {
+  position: absolute;
+}
+
+.time-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30%;
+}
+.time-container .time-render {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  transition: transform 0.1s linear;
+}
+.time-container .time-render .time-bar-gone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: 0 50%;
+  background: #fefefe;
+  transform: scaleX(0);
+}
+.time-container .time-render .time-bar-total {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #756d6d;
+}
+.time-container:hover .time-render {
+  transform: scaleY(2.5);
+}
+.time-container:hover {
+  cursor: pointer;
+}
+.time-container .time-stamp {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 0;
+  background: #756d6d;
+  color: #fefefe;
+  padding: 1.5% 1%;
+}
+
+.volume-container {
+  position: relative;
+  width: 8%;
+  height: 30%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.volume-container .volume-render {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  transition: transform 0.1s linear;
+}
+.volume-container .volume-render .volume-bar-gone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: 0 50%;
+  background: #fefefe;
+  transform: scaleX(0);
+}
+.volume-container .volume-render .volume-bar-total {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 99%;
+  background: #756d6d;
+  transition: 0.1s all linear;
+}
+.volume-container:hover .volume-render {
+  transform: scaleY(1.8);
+}
+.volume-container:hover {
+  cursor: pointer;
+}
+
+.controls-button-info {
+  margin-left: 48.5%;
+}
+
+.controls-button-website {
+  margin-left: 0.9%;
+}
+
+.controls-button-facebook {
+  margin-left: 0.9%;
+}
+
+.controls-button-twitter {
+  margin-left: 0.9%;
+}
+
+.controls-button-download {
+  margin-left: 0.9%;
+}
+
+.controls-button-previous {
+  margin-left: 2%;
+}
+
+.time-letters {
+  margin-left: 3%;
+}
+.time-letters span {
+  color: #756d6d;
+}
+.time-letters span.time-gone {
+  color: #fefefe;
+}
+.time-letters span.time-slash {
+  margin: 0px 5%;
+}
+
+.controls-button-volume {
+  margin-left: 3%;
+}
+
+.controls-button-repeat {
+  margin-left: 37.5%;
+}
+
+.controls-button-cinema {
+  margin-left: 2%;
+}
+
+.controls-button-fullscreen {
+  margin-left: 2%;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+@keyframes info-title-go {
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes info-title-back {
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+@media screen and (max-width: 60em) {
+  span {
+    font-size: 1.3vw;
+  }
+
+  .video-container {
+    width: 94%;
+  }
+}

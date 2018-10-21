@@ -1,0 +1,10 @@
+//Event Listeners 
+searchInput.addEventListener('change', displaySuggestions)
+searchInput.addEventListener('keyup', displaySuggestions)
+searchInput.addEventListener('mousedown', displaySuggestions)
+recognition.addEventListener('end', recognition.start)
+recognition.addEventListener('result', displayRecognition)
+recognition.start()
+map.addEventListener('click', displayPopup)
+map.addEventListener('mousedown', handleMousedown)
+window.addEventListener('mouseup', handleMouseup)
