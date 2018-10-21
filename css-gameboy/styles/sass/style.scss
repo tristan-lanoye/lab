@@ -1,0 +1,201 @@
+$grey: #37bbe4;
+$button: #333333;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Spectral SC', serif;
+    color: #fefefe;
+}
+
+.space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #123456;
+    perspective: 800px;
+    overflow: hidden;
+    .gameboy {
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        transform-origin: 100px 150px; // transform:rotateY(30deg) rotateZ(30deg) ;
+        transform-style: preserve-3d;
+        transition: 0.2s transform ease; 
+        will-change: transform;
+        .front {
+            position: absolute;
+            transform: translateZ(25px);
+            opacity: 0.7;
+            background: $grey;
+            width: 200px;
+            height: 300px;
+            #canvas {
+                position: absolute;
+                top: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .cross-up {
+                position: absolute;
+                left: 3rem;
+                top: 10.6rem;
+                background: $button;
+                width: 0.7rem;
+                height: 1rem;
+            }
+            .cross-down {
+                position: absolute;
+                left: 3rem;
+                top: 12.3rem;
+                background: $button;
+                width: 0.7rem;
+                height: 0.8rem;
+            }
+            .cross-left {
+                position: absolute;
+                left: 2.2rem;
+                top: 11.6rem;
+                background: $button;
+                width: 1.2rem;
+                height: 0.7rem;
+            }
+            .cross-right {
+                position: absolute;
+                left: 3.4rem;
+                top: 11.6rem;
+                background: $button;
+                width: 1.2rem;
+                height: 0.7rem;
+            }
+            .button-a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 1.8rem;
+                top: 10.46rem;
+                background: $button;
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: 100%;
+                span {
+                    font-size: 0.8rem; 
+                    color: #fefefe;
+                }
+            }
+            .button-b {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 3.6rem;
+                top: 11.6rem;
+                background: $button;
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: 100%;
+                span {
+                    font-size: 0.8rem; 
+                    color: #fefefe;
+                }
+            }
+            .model {
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                position: absolute;
+                bottom: 0;
+                width: 100%; 
+                height: 3rem; 
+            }
+        }
+        .back {
+            position: absolute;
+            transform: translateZ(-25px);
+            background: $grey;
+            width: 200px;
+            height: 300px;
+        }
+        .right {
+            position: absolute;
+            transform: translateX(175px) rotateY(90deg);
+            background: $grey;
+            width: 50px;
+            height: 300px;
+        }
+        .left {
+            position: absolute;
+            transform: translateX(-25px) rotateY(90deg);
+            background: $grey;
+            width: 50px;
+            height: 300px;
+        }
+        .top {
+            position: absolute;
+            transform: translateY(-25px) rotateX(90deg);
+            background: $grey;
+            width: 200px;
+            height: 50px;
+        }
+        .bottom {
+            position: absolute;
+            transform: translateY(275px) rotateX(90deg);
+            background: $grey;
+            width: 200px;
+            height: 50px;
+        }
+    }
+}
+
+.instructions {
+    position: absolute;
+    top: 15rem;
+    right: 15rem; 
+    text-align: center;
+    opacity: 0.9;
+    span {
+        display: block; 
+    }
+    .grey {
+        opacity: 0.5;
+    }
+}
+
+.rangeContainer {
+    position: absolute;
+    top: 5rem; 
+    .input {
+        display: inline-block;
+        margin: 0rem 2rem; 
+        span {
+            margin: 0rem 1rem; 
+        }
+    }
+}
+
+.name-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    color: #b9b9b9;
+    font-size: 0.8rem;
+    z-index: 15;
+    font-family: 'Spectral SC', serif;
+    span {
+        opacity: 0.5; 
+    }
+    a {
+        color: #b9b9b9;
+        text-decoration: none;
+        opacity: 0.5;
+        &:hover {
+            opacity: 0.7; 
+        }
+    }
+}
