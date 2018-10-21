@@ -2,10 +2,6 @@
 
 This website comes from a team project at HETIC. We were asked to develop a website about the company Space X. I was in charge of designing and developing the home page.
 
-## Demo 
-
-https://tristan-lanoye.github.io/spacexmoments-homepage/
-
 ## Tools 
 
 - Code : HTML, CSS, JS

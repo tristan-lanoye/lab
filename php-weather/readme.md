@@ -4,9 +4,7 @@ Weather & Food is a 2-page website written in PHP/JS that allows you to select a
 
 It is powered by APIs from OpenWeatherMap, Dark Sky, Yelp, Leaflet, Mapbox and the Speech Recognition API.
 
-Warning : API may not all work locally, I ran into a problem where I had to make API calls with an HTTPS connection. 
-
-LINK THAT WORKS : https://www.tristan-lanoye.com/lab/php-weather/
+Warning : API may not all work locally, I ran into a problem where I had to make API calls with an HTTPS connection.
 
 ## Features 
 #### First page
