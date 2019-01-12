@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WWF | Share your project{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/upload.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-explore">
+	        <div class="page-info">
+                <div class="anxious-gorilla"><img src="images/gorilla.jpg" alt="Poor and strong gorilla looking slightly anxious"></div>
+                <h1 class="page-title">Share your project</h1>
+                <p class="page-description">A project is far more than just a money collect.</p>
+                <p class="page-description">Mobilize the WWF community around your next great idea.</p>
+                <p class="page-description">Send your best ideas to WWF, and be selected as a starter project.</p>
+            </div>
+            <form id="regForm" action="{{ path('succeedForm') }}" method="POST">
+            <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <h3 class="tab-title">Choose a category for your project</h3>
+                    <p class="tab-description">This will help the potentials contributors finding your proposition easily</p>
+                    <p>
+                        <div class="select animated zoomIn options">
+                        <label class="option">
+                            <input type="radio" name="option" value="oceanss">
+                            <span class="title animated fadeIn">Oceans</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="option" value="forests">
+                            <span class="title animated fadeIn">Forests</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="option" value="wildlife">
+                            <span class="title animated fadeIn">Wild life</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="option" value="climate">
+                            <span class="title animated fadeIn">Climate</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="option" value="food">
+                            <span class="title animated fadeIn">Alimentation</span>
+                        </label>
+                        </div>
+                    </p>
+                </div>
+
+                <div class="tab">
+                    <h3 class="tab-title">Tell us more.</h3>
+                    <p class="tab-description">A short description will allow us to understand the emergency. What is the current situation? Why should people give money to your project?</p>
+                    <p><textarea class="project-description" rows="4" cols="50" maxlength="300" name="descritpion"></textarea></p>
+                </div>
+
+                {# <div class="tab">
+                    <h3 class="tab-title">Log in.</h3>
+                    <p class="tab-description">Log in or create an account to submit your project to our team. We'll give you an answer within a few days!</p>
+                    <label for="email">Email</label>
+                    <p><input id="email" name="email"></p>
+                    <label for="password">Password</label>
+                    <p><input id="password" type="password" name="password"></p>
+                    <div class="no-account">No account? <a href="#">Join us</a></div>
+                </div> #}
+
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn">Prev</button>
+                        <button type="button" id="nextBtn">Next</button>
+                    </div>
+                </div>
+
+				<!-- Circles which indicates the steps of the form: -->
+				<div style="text-align:center;margin-top:40px;">
+					<span class="step"></span>
+					<span class="step"></span>
+				</div>
+			</form>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/upload.js') }}"></script>
+{% endblock %}

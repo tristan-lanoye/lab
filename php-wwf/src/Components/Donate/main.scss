@@ -1,0 +1,140 @@
+@import '../Utils/scss/common';
+
+.wrapper-donate {
+	padding: 85px 0;
+	.project-intro {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 25px;
+
+		.author {
+			font-size: 14px;
+			line-height: $p-line-height;
+			opacity: 0.75;
+		}
+
+		.name {
+			font-size: 22px;
+			line-height: $h2-line-height;
+			font-family: $font-sans;
+			text-transform: uppercase;
+			font-weight: 500;
+			opacity: 0.9;
+			margin-top: 5px;
+		}
+
+		.description {
+			font-family: $font-content;
+			font-size: $p;
+			width: 45%;
+			min-width: 350px;
+			opacity: 0.85;
+			margin: 5px auto 30px auto;
+			line-height: $p-line-height;
+		}
+	}
+
+	.new-donation {
+		background: green;
+	}
+
+	.pledges {
+		width: 400px;
+		margin: 0 auto;
+
+		.amount	{
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 22px;
+			font-family: $font-sans;
+			text-transform: uppercase;
+			font-weight: 500;
+			opacity: 0.9;
+		}
+
+		.cta {
+			display: block;
+			text-align: center;
+			background: $wwf-orange;
+			color: white;
+			padding: 22px 20px;
+			border-radius: 2px;
+			margin-bottom: 30px;
+			box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+			transition: 0.2s all ease;
+
+			&:hover {
+				box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+			}
+		}
+	}
+	.donation-block {
+		display: block;
+		padding: 25px 30px 10px 30px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+		margin-bottom: 25px;
+		transition: 0.2s all ease;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+		}
+
+		.title {
+			font-size: 20px;
+			line-height: $p-line-height;
+			margin-bottom: 8px;
+		}
+		.subtitle {
+			font-size: 13px;
+			opacity: 0.6;
+			margin-bottom: 20px;
+		}
+		.description {
+			font-family: $font-content;
+			margin-bottom: 30px;
+			font-size: $p;
+			line-height: $p-line-height;
+			opacity: 0.85;
+		}
+		.start {
+			margin-bottom: 25px;
+			.label {
+				font-size: 15px;
+				opacity: 0.6;
+			}
+
+			.value {
+				font-size: 15px;
+				line-height: $p-line-height;
+				margin-bottom: 4px;
+			}
+		}
+		.donations {
+			font-size: 13px;
+			opacity: 0.6;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+
+@media (max-width: 700px) {
+	.wrapper-donate {
+		.project-intro {
+			.name {
+				line-height: 30px;
+			}
+			.description {
+				min-width: 300px;
+			}
+		}
+		.pledges {
+			width: 300px;
+		}
+	}
+}

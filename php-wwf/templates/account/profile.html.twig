@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}BT Project | Profil ({{ username }}){% endblock %}#}
+{% block title %}WWF | Profile (Machin){% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/profile.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-profile">
+			<div class="main-content">
+				<div class="avatar-container">
+					<img src="http://www.coollibrarian.com/wp-content/uploads/metal-gear-solid-wallpaper-207-best-metal-gear-images-on-pinterest.jpg" class="avatar" alt=""/>
+				</div>
+				<div class="username">{{ username }}</div>
+				<div class="projects">
+					You backed 0 projects
+				</div>
+				<div class="separator"></div>
+				<div class="activity">
+					No recent activity
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/profile.js') }}"></script>
+{% endblock %}

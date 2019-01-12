@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WWF | Project List{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/list.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-list">
+			<div class="section introduction">
+				{% if headProject %}
+					<div class="title">Here are the <span class="type-project">{{ category }}</span> projects</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus, adipisci animi assumenda atque dolores est facilis libero natus nisi perferendis quidem quo similique sunt suscipit totam unde veniam voluptate.</div>
+				{% else  %}
+					<div class="title">There are no <span class="type-project">{{ category }}</span> projects</div>
+				{% endif %}
+			</div>
+			{% if headProject %}
+					<div class="section featured-projects">
+						<div class="project-main">
+							<h1 class="section-intro">Head project</h1>
+							<a href="{{ path('project', {'id': headProject.id}) }}" class="content">
+								<div class="inner-project-main">
+									<div class="image-container">
+										<img src="{{ headProject.image }}" class="image" alt="">
+										<div class="progress-bar" style="transform: scaleX({{ min(1, ((headProject.currentMoney / headProject.neededMoney)|round(2))) }})"></div>
+									</div>
+									<div class="text-container">
+										<div class="title">
+											<span>{{ headProject.name }}</span>
+										</div>
+										<div class="description">
+											<span>{{ headProject.description }}</span>
+										</div>
+										<div class="author">
+											<span>By {{ headProject.author }}</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				{% else %}
+					<div class="no-result">
+						Check out all other projects below
+					</div>
+			{% endif %}
+			{% if listProjects is empty %}
+			{% else %}
+				<div class="section list-projects">
+					<div class="projects-list">
+						{% for project in listProjects %}
+							<a href="{{ path('project', {'id': project.id}) }}" class="project">
+								<div class="image-container">
+									<img src="{{ project.image }}" class="image" alt="">
+									<div class="progress-bar" style="transform: scaleX({{ min(1, ((project.currentMoney / project.neededMoney)|round(2))) }})"></div>
+								</div>
+								<div class="title">
+									<span>{{ project.name }}</span>
+								</div>
+								<div class="description">
+									<span>{{ project.description }}</span>
+								</div>
+								<div class="author">
+									<span>{{ project.author }}</span>
+								</div>
+							</a>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+			<div class="section all-projects">
+				<div class="section-topbar">
+					<div class="section-intro">All <span class="type-project"></span> projects</div>
+				</div>
+				<div class="projects-list">
+					{% for project in projects %}
+						<a href="{{ path('project', {'id': project.id}) }}" class="project">
+							<div class="image-container">
+								<img src="{{ project.image }}" class="image" alt="">
+								<div class="progress-bar" style="transform: scaleX({{ min(1, ((project.currentMoney / project.neededMoney)|round(2))) }})"></div>
+							</div>
+							<div class="title">
+								<span>{{ project.name }}</span>
+							</div>
+							<div class="description">
+								<span>{{ project.description }}</span>
+							</div>
+							<div class="author">
+								<span>{{ project.author }}</span>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/upload.js') }}"></script>
+{% endblock %}

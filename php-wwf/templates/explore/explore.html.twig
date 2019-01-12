@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WWF | Explore{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/explore.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-explore">
+			{#<h1 class="page-title">Explore</h1>#}
+
+			<div class="section collections">
+				<h2 class="section-title">Collections</h2>
+				<div class="separator"></div>
+				<div class="items-container">
+					<a class="item" href="{{ path('list', {'cat': 'all'}) }}">All projects</a>
+					<a class="item" href="{{ path('list', {'cat': 'best'}) }}">Our best picks</a>
+					<a class="item" href="{{ path('list', {'cat': 'ending'}) }}">Almost complete</a>
+					<a class="item" href="{{ path('list', {'cat': 'new'}) }}">New projects</a>
+				</div>
+			</div>
+
+			<div class="section categories">
+				<h2 class="section-title">Categories</h2>
+				<div class="separator"></div>
+				<div class="items-container">
+					<a class="item" href="{{ path('list', {'cat': 'ocean'}) }}">Oceans</a>
+					<a class="item" href="{{ path('list', {'cat': 'food'}) }}">Food</a>
+					<a class="item" href="{{ path('list', {'cat': 'wildlife'}) }}">Wildlife</a>
+					<a class="item" href="{{ path('list', {'cat': 'forest'}) }}">Forests</a>
+					<a class="item" href="{{ path('list', {'cat': 'climate'}) }}">Climate</a>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/explore.js') }}"></script>
+{% endblock %}

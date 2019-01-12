@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WWF | Project{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('build/project.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-project">
+			<div class="section introduction">
+				<div class="top">
+					<div class="left">
+						<div class="avatar-container">
+							<img src="http://www.coollibrarian.com/wp-content/uploads/metal-gear-solid-wallpaper-207-best-metal-gear-images-on-pinterest.jpg" class="avatar" alt="">
+						</div>
+						<div class="username">By {{ project.author }}</div>
+						<div class="number">Second project</div>
+					</div>
+					<div class="right">
+						<div class="title">{{ project.name }}</div>
+						<div class="description">{{ project.description }}</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="left">
+						<div class="image-container">
+							<img src="{{ project.image }}" class="image" alt="">
+						</div>
+					</div>
+					<div class="right">
+						<div class="item progress-bar">
+							<div class="current-bar" style="transform: scaleX({{ min(1, ((project.currentMoney / project.neededMoney)|round(2))) }})"></div>
+						</div>
+						<div class="item amount">
+							<div class="current value">€{{ project.currentMoney|number_format(2, '.', ',') }}</div>
+							<div class="needed label">pledged of €{{ project.neededMoney|number_format(2, '.', ',') }} goal</div>
+						</div>
+						<div class="item donations">
+							<div class="value">{{ project.donations }}</div>
+							<div class="label">backers</div>
+						</div>
+						<div class="item time-left">
+							<div class="value">{{ daysLeft|abs }}</div>
+							<div class="label">days to go</div>
+						</div>
+						<a href="{{ path('donate', {'id' : project.id}) }}" class="item cta">
+							Back this project
+						</a>
+						<div class="item copyright">
+							All or nothing. This project will only be funded if it reaches its goal by {{ project.dateDeadline|date('Y-m-d') }}.
+						</div>
+					</div>
+				</div>
+				<div class="separator-section"></div>
+			</div>
+			<div class="section content">
+				<div class="left">
+					<div class="section-intro">What is this project ?</div>
+					<p class="paragraph-intro">{{ project.description }}</p>
+					<div class="image-container">
+						<img src="{{ project.image }}" class="image" alt="">
+					</div>
+					<div class="section-title">First Section</div>
+					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet consequuntur debitis dolorem earum enim eos eveniet id ipsum iure laboriosam magnam natus numquam optio quisquam, sapiente sunt veritatis voluptas?</p>
+					<div class="section-title">Second Section</div>
+					<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet consequuntur debitis dolorem earum enim eos eveniet id ipsum iure laboriosam magnam natus numquam optio quisquam, sapiente sunt veritatis voluptas?</p>
+				</div>
+				<div class="right">
+					<div class="section-intro">Donate</div>
+					<div class="paragraph-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aspernatur debitis error facilis, fugiat fugit id ipsa ipsum magni molestias mollitia nemo optio quisquam quo quod suscipit vel. Labore!</div>
+					<a href="{{ path('donate', {'id' : project.id}) }}" class="donation-block">
+						<div class="title">Pledge US$ 5 or more</div>
+						<div class="subtitle">about €4</div>
+						<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam delectus ducimus laudantium pariatur quae quaerat rem, similique! Asperiores commodi corporis cum debitis distinctio doloribus laborum mollitia, officia quod vel.</div>
+						<div class="start">
+							<div class="label">Estimated start date</div>
+							<div class="value">{{ project.dateDeadline|date('m/y') }}</div>
+						</div>
+						<div class="donations">{{ project.donations // 2 }} backers</div>
+					</a>
+					<a href="{{ path('donate', {'id' : project.id}) }}" class="donation-block">
+						<div class="title">Pledge US$ 25 or more</div>
+						<div class="subtitle">about €20</div>
+						<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam delectus ducimus laudantium pariatur quae quaerat rem, similique! Asperiores commodi corporis cum debitis distinctio doloribus laborum mollitia, officia quod vel.</div>
+						<div class="start">
+							<div class="label">Estimated start date</div>
+							<div class="value">{{ project.dateDeadline|date('m/y') }}</div>
+						</div>
+						<div class="donations">{{ project.donations // 4 }} backers</div>
+					</a>
+					<a href="{{ path('donate', {'id' : project.id}) }}" class="donation-block">
+						<div class="title">Pledge US$ 100 or more</div>
+						<div class="subtitle">about €75</div>
+						<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam delectus ducimus laudantium pariatur quae quaerat rem, similique! Asperiores commodi corporis cum debitis distinctio doloribus laborum mollitia, officia quod vel.</div>
+						<div class="start">
+							<div class="label">Estimated start date</div>
+							<div class="value">{{ project.dateDeadline|date('m/y') }}</div>
+						</div>
+						<div class="donations">{{ project.donations // 8 }} backers</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script src="{{ asset('build/project.js') }}"></script>
+{% endblock %}

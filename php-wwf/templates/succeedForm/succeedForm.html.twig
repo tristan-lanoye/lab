@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WWF | Form sent{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/succeedForm.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block topbar %}
+		{{ parent() }}
+	{% endblock %}
+	{% block content %}
+		{{ parent() }}
+		<div class="wrapper wrapper-succeed">
+			<div class="main-content">
+				<div class="no-result">
+					Thank you for submitting your inquiry !<br />
+					We'll reviewed this and will come back to you as soon as possible.
+				</div>
+				<a href="{{ path('home') }}" class="cta">
+					Back to home
+				</a>
+			</div>
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/succeedForm.js') }}"></script>
+{% endblock %}

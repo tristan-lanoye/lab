@@ -1,0 +1,65 @@
+//project
+$wwf-orange: rgba(243, 112, 67, 1);
+
+$s0-black: #111111;
+$s0-teal: #558a86;
+//set 1
+$s1-grey: #e5e7de;
+$s1-green: #0b3536;
+$s1-red: #f54123;
+$s1-blue: #0098d8;
+//set 2
+$s2-white: #fbfbfb;
+$s2-brown: #c7943e;
+$s2-orange: #f67944;
+$s2-blue: #2677bb;
+//set 3
+$s3-grey: #e4e6dd;
+$s3-orange: #f7772c;
+$s3-red: #dd6464;
+$s3-yellow: #fbae17;
+//set 4 
+$s4-grey: #c2b4a6;
+$s4-brown: #635045;
+$s4-green: #6e7f29;
+$s4-yellow: #e7b300;
+//set 5
+$s5-grey: #fbfbfb;
+$s5-green: #558a86;
+$s5-blue: #08327d;
+$s5-black: #0f0a01;
+//set 6
+$s6-grey: #f4f4f4;
+$s6-orange: #f77e5e;
+$s6-green: #3dbd5d;
+$s6-black: #303030;
+//set 7
+$s7-white: #f0f0f0;
+$s7-grey: #e1e0dd;
+$s7-blue: #37bbe4;
+$s7-black: #35342f;
+
+
+// Fonts
+$h1: 60px;
+$h1-line-height: calc(#{$h1} * 1.2);
+$h2: 40px;
+$h2-line-height: calc(#{$h2} * 1.2);
+$h3: 35px;
+$h3-line-height: calc(#{$h3} * 1.2);
+$p: 16px;
+$p-line-height: calc(#{$p} * 1.5);
+$tag: 13px;
+$tag-line-height: calc(#{$tag} * 1.2);
+
+$font-content: 'Source Serif Pro', serif;
+$font-title: 'Roboto', sans-serif;
+$font-sans: 'Roboto', sans-serif;
+$font-tag: 'Roboto Condensed', serif;
+$font-other: 'Source Code Pro', monospace;
+
+$spacing-condensed: 2px;
+
+$indicator-font: 15px;
+$menu-item-font: 40px;
+$menu-item-lh: calc(#{$menu-item-font} * 1.2)
