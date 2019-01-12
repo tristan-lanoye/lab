@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/icons/favicon-16x16.png">
+	<link rel="manifest" href="static/icons/site.webmanifest">
+	<link rel="mask-icon" href="static/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<title>Schizophrenia - Chapitre 2</title>
+</head>
+
+<body>
+	<div class="cursor-fixed"></div>
+	<div class="cursor">
+		<div class="inside_cursor"></div>
+	</div>
+	<div class="bar-transition bar-transition-1" data-duration="600"></div>
+	<div class="bar-transition bar-transition-2" data-duration="1000"></div>
+	<div class="bar-transition bar-transition-3" data-duration="700"></div>
+	<div class="bar-transition bar-transition-4" data-duration="900"></div>
+	<audio class="off" data-ref="0" data-page="chapter0">
+		<source src="static/music/chap0.aac" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<audio class="off" data-ref="0" data-page="chapter1">
+		<source src="static/music/chap1.aac" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<audio class="off" data-ref="0" data-page="chapter3">
+		<source src="static/music/chap3.aac" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<audio class="off" data-ref="0" data-page="chapter4">
+		<source src="static/music/chap4.aac" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<audio class="off" data-ref="0" data-page="chapter5">
+		<source src="static/music/chap5.aac" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<audio loop class="ambient">
+		<source src="static/music/ambient.mp3" type="audio/wav"> Votre navigateur ne prend pas en charge l'élément
+		<code>audio</code>.
+	</audio>
+	<div id="barba-wrapper">
+		<div class="barba-container" data-namespace="chapter2">
+			<audio src="static/music/menu.mp3" class="audio-menu"></audio>
+			<div class="chapter-content">
+				<div class="menu-svg">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5"
+					    stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+						<circle cx="12" cy="12" r="10"></circle>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+					    stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+					    stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</div>
+				<div class="current-chapter">
+					<div class="title">
+						<div class="title-bar before"></div>
+						Chapitre 2
+						<div class="title-bar after"></div>
+					</div>
+				</div>
+
+				<div class="progress-bar">
+					<div class="progress-bg" data-state="0"></div>
+					<div class="progress-visible">
+						<div class="theme theme-0">
+							<div class="point" data-anchor='0'></div>
+						</div>
+						<div class="theme theme-1">
+							<div class="point" data-anchor='1'></div>
+							<div class="point" data-anchor='2'></div>
+						</div>
+						<div class="theme theme-2">
+							<div class="point" data-anchor='3'></div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="screen active" data-active data-screen="0">
+					<div class="media">
+						<img src="static/images/02_bg0a.png" alt="" data-parallax data-amplitude="0.2">
+						<img src="static/images/02_bg0b.png" alt="" data-parallax data-amplitude="0.5">
+					</div>
+					<div class="overlay"></div>
+					<div class="intro">
+						<div class="title" data-transition="1">Durant les trentes glorieuses</div>
+						<div class="dates" data-transition="1">1945 - 1970</div>
+						<div class="subtitle" data-transition="1">Les trentes glorieuses entraîneront une nouvelle classification des différentes formes de la maladie ainsi que nombreux
+							progrès sociaux et médicaux </div>
+					</div>
+				</div>
+
+				<div class="screen" data-active data-screen="1">
+					<div class="media"></div>
+					<div class="overlay"></div>
+					<div class="sound">
+						<div class="title" data-transition="1">La classification des symptômes</div>
+						<div class="subtitle" data-transition="1">
+							<li data-choice="1">Paranoïde</li>
+							<li data-choice="2">Catatonique</li>
+							<li data-choice="3">Hébéphrénique</li>
+							<li data-choice="4">Simple</li>
+							<li data-choice="5">Mixte</li>
+						</div>
+					</div>
+					<div class="player" data-url="static/music/itw02-1.mp3" data-ref="1">
+						<div class="controls">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+							    stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause-circle active" data-type="pause">
+								<circle cx="12" cy="12" r="10"></circle>
+								<line x1="10" y1="15" x2="10" y2="9"></line>
+								<line x1="14" y1="15" x2="14" y2="9"></line>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+							    stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle" data-type="play">
+								<circle cx="12" cy="12" r="10"></circle>
+								<polygon points="10 8 16 12 10 16 10 8"></polygon>
+							</svg>
+						</div>
+					</div>
+					<div class="expert">
+						<div class="name">Philippe Fossati</div>
+						<div class="job">Chef du service de psychiatrie adulte, Hopitâl Salpêtrière</div>
+					</div>
+				</div>
+				<div class="screen" data-active data-screen="2">
+					<div class="media">
+						<img src="static/images/02_bg2.png" alt="" data-parallax data-amplitude="0.5">
+					</div>
+					<aside class="plus" data-plus="2">
+						<div class="overlay"></div>
+						<div class="container">
+							<div class="disclaimer">
+								<div class="title">En savoir plus</div>
+								<div class="more-text">
+									<p>
+										La société pensait que le schizophrène exprimait un délire exubérant ou pauvre, mais toujours dissocié ou sibyllin. Le cours
+										de sa pensée était dissocié, avec des barrages, de l’écholalie et de l’échopraxie, de la soliloquie, des troubles
+										de la parole, avec des néologismes, une déformation de l’écriture.
+									</p>
+									<p>
+										Le schizophrène restait à l’hôpital des mois, voire des années, voire toute sa vie. Cette hospitalisation au long cours lui
+										enlevait les dernières habiletés sociales et l’espoir de retrouver un jour son autonomie. Il mourait entre 40 et
+										50 ans d’une affection intercurrente, ou de tuberculose, ou de catatonie mortelle. Il était enterré dans le cimetière
+										de l’hôpital où il était oublié par tous, car il n’avait plus de famille ou avait été abandonné par les siens.
+									</p>
+								</div>
+							</div>
+						</div>
+					</aside>
+					<div class="overlay"></div>
+					<div class="text">
+						<div class="title" data-transition="1">Un regard sur la maladie</div>
+						<div class="subtitle" data-transition="1">Dans les années 50, le schizophrène était vu comme “bizarre”, “autre”. Le schizophrène avait un comportement souvent
+							incompréhensible, avec des stéréotypies et des rires “en fusée”. Il pouvait subitement être très agité, agressif et
+							violent. Il suscitait toujours la crainte, parce que ses actes étaient imprévisibles et les raptus dangereux. Il pouvait
+							aussi être catatonique, figé dans l’immobilité négativiste et maintenir des attitudes. Il exprimait un délire exubérant
+							ou pauvre, mais toujours dissocié ou sibyllin. Le cours de sa pensée était dissocié, avec des barrages, de l’écholalie
+							et de l’échopraxie, de la soliloquie, des troubles de la parole, avec des néologismes, une déformation de l’écriture.</div>
+						<div class="more" data-transition="1">
+							En savoir plus
+						</div>
+					</div>
+				</div>
+				<div class="screen" data-active data-screen="3">
+					<div class="media">
+						<img src="static/images/02_bg3.png" alt="" data-parallax data-amplitude="0.5">
+					</div>
+					<aside class="plus" data-plus="3">
+						<div class="overlay"></div>
+						<div class="container">
+							<div class="disclaimer">
+								<div class="title">En savoir plus</div>
+								<div class="more-text">
+									<p>
+										Les neuroleptiques ont été à l’origine de toutes les transformations vis à vis de la prise en charge du patient. Ils ont
+										rendu possible un hébergement normal, une nouvelle architecture des hôpitaux, la suppression des hospitalisations
+										au long cours ou à vie, la prise en charge ambulatoire et la vie dans la cité.
+									</p>
+									<p>
+										Ce progrès a été rendu possible par l’augmentation très importante du nombre des psychiatres après la reconnaissance de la
+										spécialité en 1969.
+									</p>
+								</div>
+							</div>
+						</div>
+					</aside>
+					<div class="overlay"></div>
+					<div class="text">
+						<div class="title" data-transition="1">Progrès médicaux</div>
+						<div class="subtitle" data-transition="1">La découverte en 1952 de l’action de la chlorpromazine sur l’agitation par Delay et Deniker fut le point de départ
+							d’une série de découvertes de psychotropes qui marquèrent un tournant décisif dans l’évolution de la schizophrénie
+							dès 1960.</div>
+						<div class="more" data-transition="1">
+							En savoir plus
+						</div>
+					</div>
+				</div>
+
+				<nav class="menu" data-active>
+					<div class="corner"></div>
+					<div class="img-container active" data-chapter="2">
+						<img src="static/images/02_bg0a.png" alt="" data-parallax data-amplitude="0.2" class="bg">
+						<img src="static/images/02_bg0b.png" alt="" data-parallax data-amplitude="0.5" class="front">
+					</div>
+					<div class="img-overlay"></div>
+					<div class="data-container">
+						<div class="text">
+							<div class="chapter" data-transition="2">Choix du chapitre</div>
+							<div class="title" data-transition="2">Durant les trentes glorieuses</div>
+							<div class="dates" data-transition="2">1945 - 1970</div>
+						</div>
+						<div class="numbers">
+							<a class="cir-0 cir" data-cir="0" href="chapter0.html" data-transition="3">
+								<div class="number">0</div>
+							</a>
+							<a class="cir-1 cir" data-cir="1" href="chapter1.html" data-transition="3">
+								<div class="number">1</div>
+							</a>
+							<a class="cir-2 cir" data-cir="2" href="chapter2.html" data-transition="3">
+								<div class="number">2</div>
+							</a>
+							<a class="cir-3 cir" data-cir="3" href="chapter3.html" data-transition="3">
+								<div class="number">3</div>
+							</a>
+							<a class="cir-4 cir" data-cir="4" href="chapter4.html" data-transition="3">
+								<div class="number">4</div>
+							</a>
+							<a class="cir-5 cir" data-cir="5" href="chapter5.html" data-transition="3">
+								<div class="number">5</div>
+							</a>
+						</div>
+					</div>
+				</nav>
+
+				<aside class="infos">
+					<div class="overlay"></div>
+					<div class="container">
+						<div class="disclaimer">
+							<div class="title">Mentions légales</div>
+							<div class="text">Ce web documentaire a été réalisé dans le cadre d’un projet scolaire. Nous ne détenons pas les droits des médias et
+								contenus utilisés sur ce site, à l’exception des enregistrements et textes liés à l’interview du Docteur Philippe
+								Fossati que nous avons réalisée nous-mêmes lors de nos recherches pour ce projet.
+							</div>
+						</div>
+						<div class="team">
+							<div class="title">Equipe</div>
+							<div class="member">
+								<div class="role">
+									Chef de projet
+								</div>
+								<div class="name">
+									Fanny Ravassard
+								</div>
+							</div>
+							<div class="member">
+								<div class="role">
+									Designer
+								</div>
+								<div class="name">
+									Fanny Sinan
+								</div>
+							</div>
+							<div class="member">
+								<div class="role">
+									Designer
+								</div>
+								<div class="name">
+									Pauline Aperghis
+								</div>
+							</div>
+							<div class="member">
+								<div class="role">
+									Designer
+								</div>
+								<div class="name">
+									Raphaël Guenassia
+								</div>
+							</div>
+							<div class="member">
+								<div class="role">
+									Développeur
+								</div>
+								<div class="name">
+									Paul Lamy
+								</div>
+							</div>
+							<div class="member">
+								<div class="role">
+									Développeur
+								</div>
+								<div class="name">
+									Tristan Lanoye
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<footer class="options">
+					<span class="option">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+						    stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+							<circle cx="12" cy="12" r="10"></circle>
+							<line x1="12" y1="16" x2="12" y2="12"></line>
+							<line x1="12" y1="8" x2="12" y2="8"></line>
+						</svg>
+					</span>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.6/wavesurfer.min.js"></script>
+
+</body>
+
+</html>

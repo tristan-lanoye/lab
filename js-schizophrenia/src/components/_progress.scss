@@ -1,0 +1,141 @@
+.progress-bar {
+	position: absolute;
+	top: 50%;
+	left: 3.6rem;
+	width: 8px;
+	height: calc(50vh);
+	transform: translateY(-50%);
+	background: rgba(90, 90, 90, 0.5);
+	z-index: 50;
+	.progress-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: scaleY(0);
+		background: white;
+		transition: all 1.2s ease;
+		opacity: 0.85;
+		transform-origin: 50% 0;
+		&[data-state="0"] {
+			transform: scaleY(0);
+			&+.progress-visible {
+				.theme-1 {
+					.point:first-child {
+						background: rgba(90, 90, 90, 0.75);
+					}
+					.point:last-child {
+						background: rgba(90, 90, 90, 0.75);
+					}
+				}
+				.theme-2 {
+					.point {
+						background: rgba(90, 90, 90, 0.75);
+					}
+				}
+			}
+		}
+		&[data-state="1"] {
+			transform: scaleY(0.33);
+			&+.progress-visible {
+				.theme-1 {
+					.point:first-child {
+						background: white;
+					}
+					.point:last-child {
+						background: rgba(90, 90, 90, 0.75);
+					}
+				}
+				.theme-2 {
+					.point {
+						background: rgba(90, 90, 90, 0.75);
+					}
+				}
+			}
+		}
+		&[data-state="2"] {
+			transform: scaleY(0.66);
+			&+.progress-visible {
+				.theme-1 {
+					.point:first-child {
+						background: white;
+					}
+					.point:last-child {
+						background: white;
+					}
+				}
+				.theme-2 {
+					.point {
+						background: rgba(90, 90, 90, 0.75);
+					}
+				}
+			}
+		}
+		&[data-state="3"] {
+			transform: scaleY(1);
+			&+.progress-visible {
+				.theme-1 {
+					.point:first-child {
+						background: white;
+					}
+					.point:last-child {
+						background: white;
+					}
+				}
+				.theme-2 {
+					.point {
+						background: white;
+					}
+				}
+			}
+		}
+	}
+	.progress-visible {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.theme {
+			position: relative;
+			.point {
+				position: absolute;
+				left: -2.5px;
+				width: 14px;
+				height: 14px;
+				border: 1px solid rgba(90, 90, 90, 0.2);
+				border-radius: 50%;
+				background: rgba(90, 90, 90, 0.75);
+				transition: 1.2s all ease;
+				&:hover {
+					border: 1px solid rgb(255, 255, 255) !important;
+				}
+			}
+			&.theme-0 {
+				flex: 1;
+				.point {
+					background: white;
+					top: -5px;
+				}
+			}
+			&.theme-1 {
+				flex: 1;
+				.point:first-child {
+					top: -6px;
+				}
+				.point:last-child {
+					bottom: -6px;
+				}
+			}
+			&.theme-2 {
+				flex: 1;
+				.point {
+					bottom: -5px;
+				}
+			}
+		}
+	}
+}
