@@ -153,6 +153,8 @@ const cursorMove = () => {
     cursorCoords[0].y += (coords.y - cursorCoords[0].y) / 5
     //update cursor position using css transform 
     $cursor.style.transform = `translate(${cursorCoords[0].x + 5}px, ${cursorCoords[0].y + 4}px)`
+
+    
     cursorCoords[1].x += (coords.x - cursorCoords[1].x - 4) / 1.5
     cursorCoords[1].y += (coords.y - cursorCoords[1].y - 4) / 1.5
     $cursorCircle.style.transform = `translate(${cursorCoords[1].x + 5}px, ${cursorCoords[1].y + 5}px)`

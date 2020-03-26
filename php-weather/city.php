@@ -67,8 +67,7 @@
     <body>
         <section class="section-1 orange">
             <div class="back align">
-                <!-- <a href="/php-weather">Back to main menu</a> -->
-                <a class="orange" href="https://www.tristan-lanoye.com/lab/php-weather"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(0, 115, 187)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg> Back to main menu</a>
+                <a class="orange" href="https://www.lab.tristan-lanoye.com/php-weather/"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(0, 115, 187)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg> Back to main menu</a>
             </div>    
             <div class="main align">
                 <div class="title">
