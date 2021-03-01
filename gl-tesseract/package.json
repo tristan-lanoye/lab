@@ -15,7 +15,7 @@
 		"mathjs": "^6.6.1",
 		"postprocessing": "^6.13.2",
 		"pubsub-js": "^1.8.0",
-		"three": "^0.115.0",
+		"three": "^0.125.0",
 		"three-orbit-controls": "^82.1.0"
 	},
 	"devDependencies": {
