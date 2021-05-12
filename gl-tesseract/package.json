@@ -12,7 +12,7 @@
 		"charming": "^3.0.2",
 		"dat.gui": "^0.7.6",
 		"gsap": "^3.2.6",
-		"mathjs": "^6.6.1",
+		"mathjs": "^7.5.1",
 		"postprocessing": "^6.13.2",
 		"pubsub-js": "^1.8.0",
 		"three": "^0.115.0",
